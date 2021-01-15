@@ -1,3 +1,3 @@
 <div>
-A Photo
+    <img src="<%= Routes.static_path(@conn, "/images/polarbear_photos/#{@number}.png")%>" height="<%= @height%>" width="<%= @width %>"></img>
 </div>
