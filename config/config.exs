@@ -12,7 +12,9 @@ config :placepolar,
 
 # Configures the endpoint
 config :placepolar, PlacepolarWeb.Endpoint,
-  url: [host: "localhost"],
+  http: [port: {:system, "PORT"}],
+  url: [scheme: "https", host: "radiant-caverns-73813.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   secret_key_base: "0of9ITgxLpMYRYqKLHKdXkiAoOIdazWeRr7RLxJglwKVbKkA83z0YGeEE3aMHvKu",
   render_errors: [view: PlacepolarWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Placepolar.PubSub,
