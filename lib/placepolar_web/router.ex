@@ -17,8 +17,7 @@ defmodule PlacepolarWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/users", UserController, :index
-    get "/users/:id", UserController, :show
+    resources "/users", UserController, only: [:index, :show, :new, :create]
     get "/photo/:width/:height", PageController, :show
   end
 
