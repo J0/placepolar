@@ -21,6 +21,12 @@ defmodule PlacepolarWeb.Router do
     resources "/users", UserController, only: [:index, :show, :new, :create]
     resources "/sessions", SessionController, only: [:index, :show, :new, :create, :delete]
     get "/photo/:width/:height", PageController, :show
+    resources "/videos", VideoController
+  end
+
+  scope "/manage", PlacepolarWeb do
+    pipe_through [:browser, :authenticate_user]
+    resources "/videos", VideoController
   end
 
   # Other scopes may use custom stacks.

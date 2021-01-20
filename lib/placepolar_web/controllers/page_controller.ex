@@ -1,6 +1,5 @@
 defmodule PlacepolarWeb.PageController do
   use PlacepolarWeb, :controller
-  import Mogrify
 
   def index(conn, _params) do
     render(conn, "index.html")

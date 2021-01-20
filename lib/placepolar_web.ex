@@ -23,6 +23,7 @@ defmodule PlacepolarWeb do
 
       import Plug.Conn
       import PlacepolarWeb.Gettext
+      import PlacepolarWeb.Auth, only: [authenticate_user: 2]
       alias PlacepolarWeb.Router.Helpers, as: Routes
     end
   end
@@ -48,6 +49,7 @@ defmodule PlacepolarWeb do
 
       import Plug.Conn
       import Phoenix.Controller
+      import PlacepolarWeb.Auth, only: [authenticate_user: 2]
     end
   end
 
