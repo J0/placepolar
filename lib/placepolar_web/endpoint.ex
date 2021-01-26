@@ -10,9 +10,9 @@ defmodule PlacepolarWeb.Endpoint do
     signing_salt: "CeXeZtNy"
   ]
 
-  socket "/socket", PlacepolarWeb.UserSocket,
-    websocket: true,
-    longpoll: false
+  # socket "/socket", PlacepolarWeb.UserSocket,
+  #   websocket: true,
+  #   longpoll: false
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 

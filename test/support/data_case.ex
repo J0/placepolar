@@ -18,12 +18,13 @@ defmodule Placepolar.DataCase do
 
   using do
     quote do
-      alias Placepolar.Repo
+      alias Rumbl.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
       import Placepolar.DataCase
+      import Placepolar.TestHelpers
     end
   end
 

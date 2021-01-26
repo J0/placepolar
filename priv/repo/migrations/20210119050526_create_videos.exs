@@ -9,7 +9,7 @@ defmodule Placepolar.Repo.Migrations.CreateVideos do
       add :user_id, references(:users, on_delete: :nothing)
 
       timestamps()
-    end
+    end 
 
     create index(:videos, [:user_id])
   end

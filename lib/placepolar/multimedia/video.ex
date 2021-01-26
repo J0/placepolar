@@ -18,6 +18,7 @@ defmodule Placepolar.Multimedia.Video do
     video
     |> cast(attrs, [:url, :title, :description])
     |> validate_required([:url, :title, :description])
+    |> assoc_constraint(:category)
   end
 
   # def create_video(%Accounts.User{} = user, attrs \\ %{}) do
