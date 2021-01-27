@@ -18,7 +18,7 @@ defmodule Placepolar.DataCase do
 
   using do
     quote do
-      alias Rumbl.Repo
+      alias Placepolar.Repo
 
       import Ecto
       import Ecto.Changeset
